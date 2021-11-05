@@ -25,7 +25,7 @@ share/python-wheels/
 *.egg-info/
 .installed.cfg
 *.egg
-MANIFEST
+.pypirc
 
 # PyInstaller
 #  Usually these files are written by a python script from a template
@@ -47,7 +47,6 @@ htmlcov/
 nosetests.xml
 coverage.xml
 *.cover
-*.py,cover
 .hypothesis/
 .pytest_cache/
 
@@ -70,6 +69,7 @@ instance/
 
 # Sphinx documentation
 docs/_build/
+docs/packages/_autosummary
 
 # PyBuilder
 target/
@@ -91,12 +91,8 @@ ipython_config.py
 #   install all needed dependencies.
 #Pipfile.lock
 
-# PEP 582; used by e.g. github.com/David-OConnor/pyflow
-__pypackages__/
-
-# Celery stuff
+# celery beat schedule file
 celerybeat-schedule
-celerybeat.pid
 
 # SageMath parsed files
 *.sage.py
@@ -109,6 +105,9 @@ venv/
 ENV/
 env.bak/
 venv.bak/
+
+# MacOS
+.DS_Store
 
 # Spyder project settings
 .spyderproject
@@ -128,6 +127,12 @@ dmypy.json
 # Pyre type checker
 .pyre/
 
-
-# vscode 
+# Editors
 .vscode/
+.code-workspace*
+
+# Dask
+dask-worker-space/
+
+# nohup
+nohup.out
